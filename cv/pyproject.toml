@@ -12,6 +12,7 @@ dependencies = [
 dev = [
   'ruff>=0.4',
   'ty>=0.0.1a1',
+  'bandit>=1.7',
 ]
 
 [tool.ruff]
