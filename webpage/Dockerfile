@@ -18,6 +18,9 @@ ENTRYPOINT ["/usr/local/bin/types-entrypoint.sh"]
 FROM deps AS security
 ENTRYPOINT ["/usr/local/bin/security-entrypoint.sh"]
 
+FROM deps AS lock
+ENTRYPOINT ["/usr/local/bin/lock-entrypoint.sh"]
+
 FROM deps AS watch
 COPY webpage/public ./public
 COPY resume.yaml .

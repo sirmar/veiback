@@ -16,6 +16,11 @@
     "astro": "^6.1.6",
     "js-yaml": "^4.1.1"
   },
+  "pnpm": {
+    "overrides": {
+      "postcss": ">=8.5.10"
+    }
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.4.12",
     "@types/js-yaml": "^4.0.9",
