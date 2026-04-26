@@ -22,9 +22,10 @@ FROM dev AS security
 ENTRYPOINT ["security-entrypoint.sh"]
 
 FROM base AS prod
+# hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
-  chromium=147.0.7727.55-1~deb13u1 \
-  fonts-liberation=1:2.1.5-3 \
+  chromium \
+  fonts-liberation \
   && rm -rf /var/lib/apt/lists/*
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 ENV PYTHONPATH=/workspace/src
