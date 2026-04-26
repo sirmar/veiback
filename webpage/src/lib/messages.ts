@@ -23,9 +23,8 @@ const ui = {
     },
     contact: {
       cta: 'Hör av dig',
-      intro: 'Har du ett uppdrag eller vill du bara byta några ord? Skicka ett mejl eller ring.',
+      intro: 'Har du ett uppdrag eller vill du bara byta några ord? Skicka ett mejl.',
       email: 'E-post',
-      phone: 'Telefon',
       linkedin: 'LinkedIn',
       github: 'GitHub',
       cv: 'Ladda ner CV',
@@ -59,9 +58,8 @@ const ui = {
     },
     contact: {
       cta: 'Get in touch',
-      intro: 'Have an assignment or just want to talk? Send an email or give me a call.',
+      intro: 'Have an assignment or just want to talk? Send an email.',
       email: 'Email',
-      phone: 'Phone',
       linkedin: 'LinkedIn',
       github: 'GitHub',
       cv: 'Download CV',

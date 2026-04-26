@@ -71,8 +71,6 @@ export interface VolunteerEntry {
 export interface Resume {
   personal: {
     name: string;
-    address: string;
-    phone: string;
     email: string;
     linkedin: string;
     github: string;
