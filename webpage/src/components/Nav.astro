@@ -1,0 +1,102 @@
+---
+import { t } from '../lib/messages';
+import type { Locale } from '../lib/types';
+
+interface Props {
+  locale: Locale;
+  otherPath: string;
+}
+
+const { locale, otherPath } = Astro.props;
+const otherLabel = locale === 'sv' ? 'EN' : 'SV';
+---
+<nav>
+  <a class="logo" href={`/${locale}/`}>
+    <span class="logo-name">Veibäck</span>
+    <span class="logo-sub">Effektiv Utveckling AB</span>
+  </a>
+  <div class="nav-right">
+    <ul>
+      <li><a href="#services">{t(locale, 'nav.services')}</a></li>
+      <li><a href="#about">{t(locale, 'nav.about')}</a></li>
+      <li><a href="#experience">{t(locale, 'nav.experience')}</a></li>
+      <li><a href="#clients">{t(locale, 'nav.clients')}</a></li>
+      <li><a href="#contact">{t(locale, 'nav.contact')}</a></li>
+    </ul>
+    <a class="lang-toggle" href={otherPath}>{otherLabel}</a>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(15,17,23,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ffffff10;
+    z-index: 100;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+  .logo-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.01em;
+  }
+  .logo-sub {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--text); }
+  .lang-toggle {
+    background: transparent;
+    border: 1px solid #ffffff20;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .lang-toggle:hover { color: var(--text); border-color: var(--accent); }
+
+  @media (max-width: 640px) {
+    nav { padding: 0.75rem 1.25rem; }
+    ul { gap: 1rem; }
+    nav a { font-size: 0.8rem; }
+    .nav-right { gap: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    ul { display: none; }
+  }
+</style>

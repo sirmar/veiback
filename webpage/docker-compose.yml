@@ -1,0 +1,6 @@
+services:
+  veiback-se:
+    container_name: ${DEV_CONTAINER}
+    image: ${DEV_IMAGE}
+    ports:
+      - '${DEV_PORT}:4321'

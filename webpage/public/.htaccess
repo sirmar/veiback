@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^$ /sv/ [R=301,L]

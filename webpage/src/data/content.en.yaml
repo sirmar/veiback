@@ -1,0 +1,74 @@
+company:
+  name: Veibäck Effektiv Utveckling AB
+  tagline: Code that works. Teams that deliver.
+  description: >
+    With 20 years of experience in software development and agile ways of working, I help
+    companies build the right things, the right way — and do it efficiently. Whether it's about
+    technical delivery or getting a team to perform at its best.
+
+services:
+  - title: DevOps & CI/CD
+    description: >
+      I modernise development workflows and set up robust pipelines for builds, testing,
+      security scanning and deployment. The goal is shorter lead times and higher quality
+      with less manual effort.
+    keywords:
+      - Docker
+      - Kubernetes
+      - GitLab CI
+      - GitHub Actions
+      - Monitoring
+
+  - title: Software Development
+    description: >
+      Broad experience across backend, web and embedded systems — in languages ranging from
+      C to Python and Go. I take ownership of the delivery, from design to deployed code,
+      and work equally well independently or as part of a team.
+    keywords:
+      - Python
+      - Go
+      - Node.js
+      - Microservices
+
+  - title: Agile Coach & Scrum Master
+    description: >
+      I have led and coached teams in agile methods for over ten years. I help teams
+      collaborate better, focus on the right things and deliver with shorter lead times
+      — without sacrificing quality.
+    keywords:
+      - Scrum
+      - Agile
+      - Team development
+      - Workshops
+      - Process improvement
+
+dualities:
+  - { a: Code, b: leadership }
+  - { a: Independent, b: team player }
+  - { a: Depth, b: breadth }
+  - { a: Automation, b: process }
+
+clients:
+  - name: Ericsson
+  - name: SolarWinds / Pingdom
+  - name: Westermo
+  - name: 3M Peltor
+  - name: ABB
+  - name: Pythagoras
+  - name: Configura
+
+about:
+  heading: About me
+  body: >
+    Marcus is a software developer who enjoys both code and people. With 20 years in the industry he has delivered everything from
+    CI/CD pipelines to agile transformations, and is equally comfortable working alone on
+    a tough technical problem as leading a team.
+
+    He likes building things that work — and finding the creative solutions that make it
+    easier for others to do their best work. Technology is a means, not an end.
+
+    He lives in Skillingaryd with his wife and two sons. Outside of work he plays and
+    sings, and has long been involved in voluntary work and community leadership. He
+    enjoys tending his garden and gathering family and friends around a board game.
+
+    Consulting engagements are arranged through Kvadrat.

@@ -1,0 +1,76 @@
+company:
+  name: Veibäck Effektiv Utveckling AB
+  tagline: Kod som fungerar. Team som levererar.
+  description: >
+    Med 20 års erfarenhet av systemutveckling och agila arbetssätt hjälper jag
+    företag att bygga rätt saker, på rätt sätt — och att göra det effektivt.
+    Oavsett om det handlar om tekniska leveranser eller att få ett team att
+    fungera optimalt.
+
+services:
+  - title: DevOps & CI/CD
+    description: >
+      Jag moderniserar utvecklingsflöden och sätter upp robusta pipelines för
+      byggen, test, säkerhetsskanning och deployment. Målet är kortare ledtider
+      och högre kvalitet med mindre manuellt arbete.
+    keywords:
+      - Docker
+      - Kubernetes
+      - GitLab CI
+      - GitHub Actions
+      - Monitoring
+
+  - title: Systemutveckling
+    description: >
+      Bred erfarenhet av backend, webb och inbyggda system — i allt från C till
+      Python och Go. Jag tar ansvar för leveransen, från design till driftsatt
+      kod, och arbetar lika bra självständigt som i team.
+    keywords:
+      - Python
+      - Go
+      - Node.js
+      - Mikrotjänster
+
+  - title: Agil coach & Scrum Master
+    description: >
+      Jag har lett och coachat team i agila metoder i över tio år. Jag hjälper
+      team att samarbeta bättre, fokusera på rätt saker och leverera med kortare
+      ledtider — utan att tappa kvaliteten.
+    keywords:
+      - Scrum
+      - Agile
+      - Teamutveckling
+      - Workshops
+      - Procesförbättring
+
+dualities:
+  - { a: Kod, b: ledarskap }
+  - { a: Självständig, b: lagspelare }
+  - { a: Djup, b: bredd }
+  - { a: Automatisering, b: processer }
+
+clients:
+  - name: Ericsson
+  - name: SolarWinds / Pingdom
+  - name: Westermo
+  - name: 3M Peltor
+  - name: ABB
+  - name: Pythagoras
+  - name: Configura
+
+about:
+  heading: Om mig
+  body: >
+    Marcus är en systemutvecklare som trivs med både kod och människor. Med 20 år i branschen har han levererat allt
+    från CI/CD-pipelines till agila transformationer, och är lika bekväm med att
+    sitta ensam med ett tekniskt problem som att leda ett team.
+
+    Han gillar att bygga saker som fungerar — och att hitta de kreativa
+    lösningarna som gör det enkelt för andra att jobba bättre. Teknik är ett
+    medel, inte ett mål.
+
+    Han bor i Skillingaryd med sin fru och två pojkar. På fritiden spelar och
+    sjunger han, och har länge engagerat sig i föreningsliv och ledarskap. Han
+    sköter gärna trädgården och samlar familj och vänner kring ett brädspel.
+
+    Konsultuppdrag förmedlas via Kvadrat.

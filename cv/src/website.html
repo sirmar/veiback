@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>{{ css }}</style>
+  <title>{{ personal.name }}</title>
+</head>
+<body>
+  <header>
+    {% if profile_image %}
+    <img class="profile-photo" src="{{ profile_image }}" alt="{{ personal.name }}">
+    {% endif %}
+    <div class="header-text">
+    <h1>{{ personal.name }}</h1>
+    <div class="contact">
+      <span>{{ personal.email }}</span>
+      <span class="sep">·</span>
+      <span>{{ personal.phone }}</span>
+      <span class="sep">·</span>
+      <span>{{ personal.address }}</span>
+    </div>
+    </div>
+  </header>
+
+  <section id="profile">
+    <h2>{{ 'Profil' if lang == 'sv' else 'Profile' }}</h2>
+    <div class="profile-text">
+    {% if profile is string %}
+    <p>{{ profile }}</p>
+    {% else %}
+    {% for para in profile %}
+    <p>{{ para }}</p>
+    {% endfor %}
+    {% endif %}
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>{{ 'Erfarenhet' if lang == 'sv' else 'Experience' }}</h2>
+    {% for job in experience %}
+    <div class="exp-item">
+      <div class="exp-meta">
+        <div class="exp-period">
+          {{ job.roles[-1].start | format_date }} – {{ job.roles[0].end | format_date }}
+        </div>
+        <div class="employer">
+          {% if job.client %}{{ job.client }}{% else %}{{ job.employer }}{% endif %}
+        </div>
+        {% if job.client and job.employment_type != 'self' %}
+        <div class="via muted">{{ job.employer }}</div>
+        {% elif job.employment_type == 'self' %}
+        <div class="via muted">Egen</div>
+        {% endif %}
+        <div class="muted">{{ job.location }}</div>
+      </div>
+      <div class="exp-body">
+        {% for role in job.roles %}
+        <div class="role-title">{{ role.title }}</div>
+        {% endfor %}
+        <div class="description">
+          {% if job.description is string %}
+          <p>{{ job.description }}</p>
+          {% else %}
+          {% for para in job.description %}
+          <p>{{ para }}</p>
+          {% endfor %}
+          {% endif %}
+        </div>
+        {% if job.skills %}
+        <div class="skills">
+          {% for skill in job.skills %}
+          <span class="pill">{{ skill }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section id="education">
+    <h2>{{ 'Utbildning' if lang == 'sv' else 'Education' }}</h2>
+    {% for edu in education %}
+    <div class="row-item">
+      <span class="exp-period">{{ edu.start }} – {{ edu.end }}</span>
+      <div class="row-body">
+        <span class="role-title">{{ edu.institution }}</span>
+        <p class="description-text">{{ edu.degree }}</p>
+        {% if edu.notes %}<span class="muted small">{{ edu.notes }}</span>{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <div class="side-by-side">
+    <section id="courses">
+      <h2>{{ 'Kurser' if lang == 'sv' else 'Courses' }}</h2>
+      {% for course in courses %}
+      <div class="row-item">
+        <span class="exp-period">{{ course.year }}</span>
+        <div class="row-body">
+          <span class="role-title">{{ course.title }}</span>
+          <p class="description-text">{{ course.provider }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+
+    <section id="volunteer">
+      <h2>{{ 'Ideellt engagemang' if lang == 'sv' else 'Volunteer' }}</h2>
+      {% for v in volunteer %}
+      <div class="row-item">
+        <span class="exp-period">{{ v.start }} – {{ v.end | format_date }}</span>
+        <div class="row-body">
+          <span class="role-title">{{ v.role }}</span>
+          {% if v.organization %}<p class="description-text">{{ v.organization }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+
+  <div class="side-by-side">
+    <section id="languages">
+      <h2>{{ 'Språk' if lang == 'sv' else 'Languages' }}</h2>
+      {% for lang_item in languages %}
+      <div class="row-item">
+        <span class="exp-period">{{ lang_item.language }}</span>
+        <div class="row-body">
+          <p class="description-text">{{ lang_item.level }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+
+    {% if misc %}
+    <section id="misc">
+      <h2>{{ 'Övrigt' if lang == 'sv' else 'Misc' }}</h2>
+      {% for item in misc %}
+      <div class="row-item">
+        <span class="exp-period"></span>
+        <div class="row-body">
+          <p class="description-text">{{ item }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% endif %}
+  </div>
+
+</body>
+</html>

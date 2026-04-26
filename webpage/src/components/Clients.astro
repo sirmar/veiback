@@ -1,0 +1,41 @@
+---
+import { t } from '../lib/messages';
+import type { Content, Locale } from '../lib/types';
+
+interface Props {
+  content: Content;
+  locale: Locale;
+}
+
+const { content, locale } = Astro.props;
+---
+<section id="clients">
+  <div class="section-label">{t(locale, 'sections.clients')}</div>
+  <h2>{t(locale, 'nav.clients')}</h2>
+  <div class="clients-grid fade-in">
+    {content.clients.map(client => (
+      <div class="client-card">{client.name}</div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .clients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .client-card {
+    background: var(--surface);
+    border: 1px solid #ffffff0a;
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .client-card:hover {
+    color: var(--text);
+    border-color: #ffffff20;
+  }
+</style>

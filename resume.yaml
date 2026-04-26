@@ -1,0 +1,432 @@
+personal:
+  name: Marcus Veibäck
+  address: Parkvägen 7, 56830 Skillingaryd
+  phone: "070-4951684"
+  email: marcus@veiback.se
+  linkedin: https://www.linkedin.com/in/marcus-veiback/
+  github: https://github.com/sirmar
+  website: https://www.veiback.se
+
+profile:
+  sv: >
+    Marcus är en vass systemutvecklare med 20 års erfarenhet, varav flera år som egenföretagare.
+    Han har byggt och driftsatt webbtjänster i stor skala och arbetat i en mängd språk och miljöer
+    — på senare år med fokus på DevOps, CI/CD och moderna utvecklingsflöden.
+
+    Marcus är driven och kan arbeta självständigt. Han är också van att leda team, agera Scrum
+    Master eller på annat sätt få en grupp att fungera och leverera. Han deltar gärna i samtal om
+    såväl teknisk design och arkitektur som arbetssätt och processer.
+
+    Marcus är en strukturerad, prestigelös och kommunikativ problemlösare.
+  en: >
+    Marcus is a sharp software developer with 20 years of experience, including several years as
+    an independent contractor. He has built and operated large-scale web services and worked across
+    a wide range of languages and environments — in recent years with a focus on DevOps, CI/CD and
+    modern development workflows.
+
+    Marcus is driven and capable of working independently. He is also experienced in leading teams,
+    acting as Scrum Master, or otherwise helping a group function and deliver. He enjoys discussions
+    on technical design and architecture as much as ways of working and processes.
+
+    Marcus is a structured, unpretentious and communicative problem solver.
+
+# employment_type:
+#   employee         — on the company's own payroll
+#   consultancy      — employed by a consultancy firm, placed at a client
+#   self             — independent contractor via own company
+#
+# client: only set when employment_type is consultancy or self
+
+experience:
+  - employer: Egen (Marcus Veibäck)
+    employment_type: self
+    client: 3M Peltor
+    location: Skillingaryd
+    roles:
+      - title: QA Developer
+        start: 2025-10
+        end: null  # present
+    description:
+      sv: >
+        3M Peltor utvecklar hörselskyddsutrustning för professionellt bruk. Marcus vidareutvecklade
+        och stärkte ett testramverk för automatiserad test av hörlursfunktionalitet — med fokus på
+        robusthet och observerbarhet under testkörningar.
+
+        Marcus utredde också förutsättningarna för en migrering av versionshanteringen från
+        Bitbucket till GitHub.
+      en: >
+        3M Peltor develops hearing protection equipment for professional use. Marcus extended and
+        strengthened an automated test framework for headset functionality — focusing on robustness
+        and observability during test execution.
+
+        Marcus also investigated the prerequisites for migrating version control from Bitbucket
+        to GitHub.
+
+    skills:
+      - C#
+      - Github
+      - AI-assisterad utveckling
+
+  - employer: Egen (Marcus Veibäck)
+    employment_type: self
+    client: Pythagoras
+    location: Skillingaryd
+    roles:
+      - title: DevOps Engineer
+        start: 2024-01
+        end: 2024-07
+    description:
+      sv: >
+        Pythagoras utvecklar en webbaserad tjänst för fastighetsförvaltning. Anpassade kundens
+        applikationer och införde Docker samt moderniserade verktygsstöden för kundens
+        utvecklingsprocess, från lokal utveckling till deployment i målmiljön.
+
+        Drev kundens transformering i samverkan med företagets tech lead som DevOps/systemutvecklare.
+        Satte upp CI/CD pipelines i GitLab med byggen, coverage, statisk kodanalys och automatisk
+        skanning efter säkerhetsbrister. Ökade kundens säkerhet genom regelbunden skanning av
+        Docker images och paket samt säkrare hantering av lösenord och nycklar.
+
+        Installerade och konfigurerade monitorering av kundens miljöer och tjänster — övervakning
+        av servrar, databaser och upptid — för att kunna vidta åtgärder innan problem påverkar kunden.
+      en: >
+        Pythagoras develops a web-based property management service. Adapted the client's
+        applications and introduced Docker, while modernising the tooling for their development
+        process — from local development to deployment in the target environment.
+
+        Drove the client's transformation together with the company's tech lead in a DevOps/developer
+        role. Set up CI/CD pipelines in GitLab covering builds, coverage, static code analysis and
+        automated security scanning. Improved security through regular scanning of Docker images and
+        packages, and more secure handling of passwords and keys.
+
+        Installed and configured monitoring of the client's environments and services — covering
+        servers, databases and uptime — to enable action before issues impact end users.
+    skills:
+      - Docker
+      - GitLab
+      - Prometheus
+      - Grafana
+      - Java
+      - Maven
+      - JavaScript
+      - Vite
+      - Bash
+
+  - employer: Westermo
+    employment_type: employee
+    location: Västerås
+    roles:
+      - title: Developer och Agile Coach
+        start: 2021-08
+        end: 2024-01
+    description:
+      sv: >
+        Westermo utvecklar robusta routrar för användning i utsatta miljöer som tåg, energisystem och
+        industri. Ledde ett team som utvecklade ramverk för automattest och system för att visualisera
+        testresultat för routrarnas operativsystem.
+
+        I rollen som agil coach hjälpte Marcus teamet att införa Scrum och därigenom främja ökat
+        samarbete, ständig förbättring och kortare ledtider för leveranser. Som utvecklare skapade han
+        verktyg för förbättrad utvecklingsmiljö, satte upp CI/CD-miljön och bidrog i teamets leveranser.
+      en: >
+        Westermo develops rugged routers for demanding environments such as rail, energy systems and
+        industry. Led a team developing an automated test framework and a system for visualising test
+        results for the routers' operating system.
+
+        As agile coach, Marcus helped the team adopt Scrum and thereby foster greater collaboration,
+        continuous improvement and shorter delivery lead times. As a developer he created tools to
+        improve the development environment, set up the CI/CD pipeline and contributed to the team's
+        deliveries.
+    skills:
+      - Python
+      - Golang
+      - Docker
+      - Kubernetes
+      - GitLab
+      - Git
+      - Scrum
+      - Micro services
+
+  - employer: SolarWinds/Pingdom
+    employment_type: employee
+    location: Västerås
+    roles:
+      - title: Technical Lead Developer
+        start: 2019-08
+        end: 2021-08
+      - title: Senior Developer
+        start: 2017-07
+        end: 2019-08
+      - title: Developer
+        start: 2015-02
+        end: 2017-07
+    description:
+      sv: >
+        Som utvecklare medverkade Marcus till flertalet nya tjänster och API:er som sjösatts och
+        använts av hundratusentals användare. Han ansvarade för företagets utvecklingsmiljö och
+        gjorde det enkelt att, genom ett enhetligt gränssnitt, bygga och starta tjänster lokalt,
+        köra tester, skapa releaser och annat som tillhör en utvecklares vardag.
+
+        Som Scrum Master hjälpte Marcus teamet att samarbeta, fokusera och leverera rätt saker
+        till kund med så korta ledtider som möjligt — genom att i samråd med produktägare och
+        chefer göra klart vad som behöver göras härnäst, bryta ner uppgifter i mindre delar och
+        kommunicera frågetecken och framsteg i pågående projekt. Han medverkade också till
+        ständiga förbättringar av teamets processer, utvecklingsmiljö och verktyg.
+
+        Som Agile Coach ledde Marcus workshops för Scrum Masters om hur man bäst leder team och
+        hur man kan göra rutinerna i Scrum effektiva, omväxlande och roliga.
+      en: >
+        As a developer, Marcus contributed to numerous new services and APIs launched and used by
+        hundreds of thousands of users. He was responsible for the company's development environment,
+        making it easy — through a unified interface — to build and run services locally, execute
+        tests, create releases and handle other everyday developer tasks.
+
+        As Scrum Master, Marcus helped the team collaborate, focus and deliver the right things to
+        customers with the shortest possible lead times — by clarifying priorities with product owners
+        and managers, breaking work into smaller pieces and communicating blockers and progress. He
+        also contributed to continuous improvements of the team's processes, tooling and environment.
+
+        As Agile Coach, Marcus ran workshops for Scrum Masters on how to lead teams effectively and
+        how to make Scrum ceremonies efficient, varied and enjoyable.
+    skills:
+      - Python
+      - Node
+      - Golang
+      - PHP
+      - Docker
+      - Jira
+      - Micro services
+      - MySQL
+      - GitHub
+      - CircleCI
+      - Git
+      - Scrum
+      - AWS
+
+  - employer: ÅF
+    employment_type: consultancy
+    client: ABB SA Systems
+    location: Västerås
+    roles:
+      - title: Developer
+        start: 2014-01
+        end: 2015-02
+      - title: Developer (internt)
+        start: 2013-04
+        end: 2014-01
+    description:
+      sv: >
+        ABB SA Systems utvecklar reläskydd för att öka säkerhet och kvalitet i elnätet.
+        Marcus medverkade till att utveckla reläskyddens mjukvara som utvecklare i ett
+        utvecklingsteam och implementerade ny funktionalitet.
+      en: >
+        ABB SA Systems develops protection relays to improve safety and quality in the power grid.
+        Marcus contributed to the development of the relay protection software as a developer within
+        a development team, implementing new functionality.
+    skills:
+      - C
+      - C++
+
+  - employer: Egen (Marcus Veibäck)
+    employment_type: self
+    client: Motorola / A1 (via HiQ)
+    location: Linköping
+    roles:
+      - title: Developer
+        start: 2010-09
+        end: 2013-08
+    description:
+      sv: >
+        Marcus utvecklade portal och middleware för en ny IPTV-box för A1 i Österrike. Arbetet
+        inleddes med nyutveckling och övergick till kvalitetshöjande arbete när projektet närmade
+        sig sin slutfas.
+
+        Förutom implementation av ny funktionalitet löste Marcus flera prestandaproblem och
+        medverkade till förbättrad automatisk testning. Han tränade också teamet i enhetstestning
+        och Linux. Tillsammans med en agil coach infördes och tränades samtliga team i Scrum och
+        agila praktiker.
+      en: >
+        Marcus developed the portal and middleware for a new IPTV set-top box for A1 in Austria.
+        The work began with new development and shifted towards quality improvements as the project
+        approached its final phase.
+
+        In addition to implementing new functionality, Marcus resolved several performance issues
+        and contributed to improved automated testing. He also trained the team in unit testing and
+        Linux. Together with an agile coach, all teams were introduced to and trained in Scrum and
+        agile practices.
+    skills:
+      - JavaScript
+      - Java
+      - Python
+      - Subversion
+      - Jenkins
+      - TDD
+      - Scrum
+
+  - employer: Ericsson
+    employment_type: employee
+    location: Linköping
+    roles:
+      - title: Developer
+        start: 2009-01
+        end: 2010-08
+    description:
+      sv: >
+        Marcus utvecklade mjukvara för basstationer för 4G med övergripande ansvar för
+        implementation, testning och anpassning av byggsystemet. Han utvecklade ett verktyg för
+        att autogenerera stora delar av applikationens kod och tester, och förenklade bygg- och
+        releaseförfarandet. Scrum och extreme programming infördes och Marcus coachades i agila
+        metoder.
+      en: >
+        Marcus developed software for 4G base stations with overall responsibility for
+        implementation, testing and adapting the build system. He developed a tool to auto-generate
+        large parts of the application's code and tests, and simplified the build and release
+        process. Scrum and extreme programming were introduced and Marcus was coached in agile methods.
+    skills:
+      - C/C++
+      - Erlang
+      - Make
+      - TDD
+
+  - employer: Ericsson
+    employment_type: employee
+    location: Linköping
+    roles:
+      - title: Developer
+        start: 2008-01
+        end: 2009-01
+    description:
+      sv: >
+        Marcus utvecklade system för övervakning av händelser i mobilnät, med arbete inom
+        nyutveckling och underhåll av ett antal applikationer. Teamet jobbade konsekvent med
+        parprogrammering, enhetstestning och automatisk funktionstest. Scrum infördes och Marcus
+        tränades i agila metoder. Han medverkade till ett antal lyckade releaser och ökad kvalitet.
+      en: >
+        Marcus developed systems for monitoring events in mobile networks, working on new
+        development and maintenance of several applications. The team consistently practised pair
+        programming, unit testing and automated functional testing. Scrum was introduced and Marcus
+        was trained in agile methods. He contributed to a number of successful releases and improved
+        quality.
+    skills:
+      - C/C++
+      - Java
+      - Python
+      - ClearCase
+      - TDD
+      - Parprogrammering
+      - Scrum
+
+  - employer: Configura
+    employment_type: employee
+    location: Linköping
+    roles:
+      - title: Applikationskonsult
+        start: 2006-03
+        end: 2008-01
+    description:
+      sv: >
+        Configura gör en grafisk applikation som kunders säljare använder för att snabbt skapa
+        korrekta offerter av komplexa, konfigurerbara produkter. Marcus kundanpassade Configura
+        för bland annat Troax och DeLaval, och fick därigenom detaljerad inblick i dessa företags
+        produkter och förutsättningar.
+
+        I tät samverkan med kundernas sakkunniga implementerade Marcus verktygsstöd för att skapa
+        offerter för olika produktlinjer, och ansvarade för releaser som levererades till kunden.
+      en: >
+        Configura makes a graphical application that clients' sales staff use to quickly create
+        accurate quotes for complex, configurable products. Marcus customised Configura for clients
+        including Troax and DeLaval, gaining detailed insight into their products and conditions.
+
+        In close collaboration with the clients' subject matter experts, Marcus implemented tooling
+        to create quotes for various product lines, and was responsible for releases delivered to
+        the client.
+    skills:
+      - C/C++
+      - CVS
+
+education:
+  - institution: Linköpings Universitet
+    start: 1998
+    end: 2005
+    degree:
+      sv: Civilingenjör i Teknisk fysik och elektroteknik, inriktning programvaruteknik
+      en: Master of Science in Applied Physics and Electrical Engineering, specialisation in Software Engineering
+
+  - institution: Linköpings Universitet
+    start: 2004
+    end: 2005
+    degree:
+      sv: Teoretisk Filosofi A och Praktisk Filosofi A och B
+      en: Theoretical Philosophy A and Practical Philosophy A and B
+
+  - institution: Betel Folkhögskola
+    start: 2002
+    end: 2003
+    degree:
+      sv: Allmän musiklinje, gitarr och sång
+      en: Music programme, guitar and vocals
+
+courses:
+  - title: Agile Coach
+    provider: Crisp
+    year: 2018
+  - title: Certified Scrum Master
+    provider: Crisp
+    year: 2013
+  - title: Linux Application Development
+    provider: Enea
+    year: 2010
+  - title: Developer Training and Test Driven Development
+    provider: Crisp
+    year: 2009
+
+languages:
+  - language:
+      sv: Svenska
+      en: Swedish
+    level:
+      sv: Modersmål
+      en: Native
+  - language:
+      sv: Engelska
+      en: English
+    level:
+      sv: Flytande
+      en: Fluent
+
+volunteer:
+  - role:
+      sv: Styrelseledamot
+      en: Board member
+    organization: Förskolan Pärlan, Västerås
+    start: 2022
+    end: 2023
+  - role:
+      sv: Musik- och sångledare på gudstjänster
+      en: Music and worship leader
+    organization: null
+    start: 2003
+    end: null  # present
+  - role:
+      sv: Styrelsemedlem
+      en: Board member
+    organization: Korskyrkan Västerås (~350 medlemmar)
+    start: 2014
+    end: 2015
+  - role:
+      sv: Styrelsemedlem
+      en: Board member
+    organization: Ryttargårdskyrkan Linköping (~900 medlemmar)
+    start: 2009
+    end: 2012
+  - role:
+      sv: Konfirmationslärare och tonårsledare
+      en: Confirmation teacher and youth leader
+    organization: Ryttargårdskyrkan
+    start: 2005
+    end: 2009
+
+misc:
+  - sv: Körkort B
+    en: Driving licence (category B)
+  - sv: Rökfri
+    en: Non-smoker

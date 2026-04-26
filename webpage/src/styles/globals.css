@@ -1,0 +1,75 @@
+:root {
+  --bg: #0f1117;
+  --surface: #1c1f26;
+  --text: #e8eaed;
+  --muted: #8b949e;
+  --accent: #4a9e6b;
+  --accent-hi: #5db87e;
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  border-top: 1px solid #ffffff08;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+/* Pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+.pill {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: #4a9e6b18;
+  border: 1px solid #4a9e6b40;
+  color: var(--accent-hi);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  section {
+    padding: 3.5rem 1.25rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+}

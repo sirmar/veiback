@@ -1,0 +1,125 @@
+---
+import { t } from '../lib/messages';
+import type { Content, Locale } from '../lib/types';
+
+interface Props {
+  content: Content;
+  locale: Locale;
+}
+
+const { content, locale } = Astro.props;
+
+const paragraphs = content.about.body.trim().split(/\n+/).map(p => p.trim());
+---
+<section id="about">
+  <div class="section-label">{t(locale, 'sections.about')}</div>
+  <h2>Marcus Veibäck</h2>
+  <div class="about-layout">
+    <div class="about-body fade-in">
+      {paragraphs.map(p => <p>{p}</p>)}
+      <a class="kvadrat-badge" href="https://kvadrat.se" target="_blank" rel="noopener noreferrer">
+        <img src="/kvadrat-logo.svg" alt="Kvadrat" />
+      </a>
+    </div>
+    <div class="about-stats fade-in">
+      <div class="stat">
+        <span class="stat-number">20<span class="stat-unit">{t(locale, 'about.yearsUnit')}</span></span>
+        <span class="stat-label">{t(locale, 'about.experience')}</span>
+      </div>
+      <div class="duality-grid">
+        {content.dualities.map(({ a, b }) => (
+          <div class="duality">{a} <span>&</span> {b}</div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: start;
+  }
+  .about-body p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .kvadrat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid #ffffff0a;
+    border-radius: var(--radius);
+    background: var(--surface);
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .kvadrat-badge:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .kvadrat-badge img {
+    height: 1.1rem;
+    width: auto;
+    display: block;
+    filter: brightness(0) saturate(100%) invert(55%) sepia(40%) saturate(500%) hue-rotate(100deg) brightness(90%);
+    transition: filter 0.2s;
+  }
+  .kvadrat-badge:hover img {
+    filter: brightness(0) saturate(100%) invert(55%) sepia(40%) saturate(500%) hue-rotate(100deg) brightness(120%);
+  }
+  .about-body p:last-child { margin-bottom: 0; }
+
+  .about-stats {
+    position: relative;
+    min-width: 200px;
+    width: 200px;
+  }
+  .stat { display: flex; flex-direction: column; gap: 0.25rem; margin-bottom: 0.75rem; }
+  .stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-unit { font-size: 1.4rem; font-weight: 400; }
+  .stat-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  .duality-grid {
+    position: relative;
+    height: 160px;
+  }
+  .duality {
+    position: absolute;
+    background: var(--surface);
+    border: 1px solid #ffffff0a;
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .duality:nth-child(1) { top:   0px; left: -20px; transform: rotate(-2deg); }
+  .duality:nth-child(2) { top:  30px; left:  30px; transform: rotate(1.5deg); }
+  .duality:nth-child(3) { top:  65px; left: -10px; transform: rotate(-1deg); }
+  .duality:nth-child(4) { top:  98px; left:  20px; transform: rotate(2deg); }
+  .duality span { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .about-layout {
+      grid-template-columns: 1fr;
+    }
+    .about-stats { width: 100%; min-width: unset; }
+    .duality-grid { height: 140px; }
+  }
+</style>

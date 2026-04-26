@@ -1,0 +1,24 @@
+[project]
+name = 'cv'
+version = '0.1.0'
+requires-python = '>=3.14'
+dependencies = [
+  "jinja2>=3",
+  "pyppeteer>=2",
+  'pyyaml>=6',
+]
+
+[project.optional-dependencies]
+dev = [
+  'ruff>=0.4',
+  'ty>=0.0.1a1',
+]
+
+[tool.ruff]
+indent-width = 2
+
+[tool.ruff.format]
+quote-style = 'single'
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'

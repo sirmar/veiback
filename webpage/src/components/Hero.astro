@@ -1,0 +1,76 @@
+---
+import type { Content } from '../lib/types';
+
+interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+---
+<div class="hero">
+  <div class="hero-text fade-in">
+    <div class="label">{content.company.name}</div>
+    <h1>Marcus Veibäck</h1>
+    <div class="tagline">{content.company.tagline}</div>
+    <p>{content.company.description}</p>
+  </div>
+  <img class="hero-img fade-in" src="/profilbild.jpg" alt="Marcus Veibäck" />
+</div>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+  .hero-text { flex: 1; }
+  .label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  .tagline {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+  p {
+    color: var(--muted);
+    max-width: 480px;
+    font-size: 0.95rem;
+  }
+  .hero-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    flex-shrink: 0;
+    filter: grayscale(20%);
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      padding-top: 5rem;
+      min-height: unset;
+    }
+    p { margin: 0 auto; }
+    .hero-img { width: 160px; height: 160px; }
+  }
+</style>

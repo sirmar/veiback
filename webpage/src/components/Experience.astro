@@ -1,0 +1,83 @@
+---
+import { t } from '../lib/messages';
+import { getString } from '../lib/dataLoader';
+import type { Resume, Locale } from '../lib/types';
+
+interface Props {
+  resume: Resume;
+  locale: Locale;
+}
+
+const { resume, locale } = Astro.props;
+
+function formatPeriod(entry: Resume['experience'][0]): string {
+  const startYear = entry.roles[entry.roles.length - 1].start.split('-')[0];
+  const latestEnd = entry.roles[0].end;
+  const endStr = latestEnd === null ? t(locale, 'experience.present') : latestEnd.split('-')[0];
+  if (startYear === endStr) return startYear;
+  return `${startYear} – ${endStr}`;
+}
+
+function getTitle(entry: Resume['experience'][0]): string {
+  return entry.roles[0].title;
+}
+
+function getDisplayName(entry: Resume['experience'][0]): string {
+  if (entry.client) {
+    return entry.client;
+  }
+  return entry.employer;
+}
+---
+<section id="experience">
+  <div class="section-label">{t(locale, 'sections.experience')}</div>
+  <h2>{t(locale, 'nav.experience')}</h2>
+
+  {resume.experience.map(entry => (
+    <div class="exp-item fade-in">
+      <div class="exp-meta">
+        <div class="period">{formatPeriod(entry)}</div>
+        <div class="employer">{getDisplayName(entry)}</div>
+        <div>{entry.location}</div>
+      </div>
+      <div class="exp-body">
+        <h3>{getTitle(entry)}</h3>
+        {getString(entry.description, locale).trim().split(/\n+/).map(p => <p>{p.trim()}</p>)}
+        <div class="pills">
+          {entry.skills.map(skill => (
+            <span class="pill">{skill}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  ))}
+</section>
+
+<style>
+  .exp-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.5rem 2rem;
+    padding: 1.75rem;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    transition: border-color 0.2s, transform 0.2s;
+    margin-bottom: 0.5rem;
+  }
+  .exp-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
+  .exp-meta { color: var(--muted); font-size: 0.85rem; }
+  .period { color: var(--accent); font-size: 0.8rem; margin-bottom: 0.25rem; }
+  .employer { font-weight: 600; color: var(--text); }
+  .exp-body h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+  .exp-body p  { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
+
+  @media (max-width: 640px) {
+    .exp-item {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+</style>
