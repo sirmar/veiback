@@ -5,7 +5,7 @@ import yaml
 
 
 def load(lang: str) -> dict[str, Any]:
-  path = Path(__file__).parents[2] / 'resume.yaml'
+  path = Path(__file__).parents[3] / 'resume.yaml'
   with open(path) as f:
     raw = yaml.safe_load(f)
   return _resolve(raw, lang)

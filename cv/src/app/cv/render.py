@@ -4,8 +4,8 @@ from typing import Any
 from cv.engines import puppeteer
 
 
-TEMPLATES_DIR = Path(__file__).parents[1]
-OUTPUT_DIR = Path(__file__).parents[1] / 'output'
+TEMPLATES_DIR = Path(__file__).parents[2]
+OUTPUT_DIR = Path(__file__).parents[2] / 'output'
 
 
 def render(data: dict[str, Any], lang: str, template: str) -> Path:
