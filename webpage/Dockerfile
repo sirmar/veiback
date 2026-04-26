@@ -1,4 +1,4 @@
-FROM ghcr.io/sirmar/dev-typescript:v0.0.3 AS base
+FROM ghcr.io/sirmar/dev-typescript:v0.0.4 AS base
 
 FROM base AS deps
 WORKDIR /workspace
