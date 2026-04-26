@@ -1,0 +1,11 @@
+.git/
+.DS_Store
+
+webpage/node_modules/
+webpage/.astro/
+webpage/dist/
+
+cv/output/
+cv/__pycache__/
+cv/.venv/
+**/*.pyc
