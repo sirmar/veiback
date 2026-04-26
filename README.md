@@ -17,7 +17,7 @@ Personal website and CV generator for [veiback.se](https://veiback.se).
 cd webpage && dev watch
 
 # CV
-cd cv && dev run --lang sv --template classic
+cd cv && dev run -- --lang sv --template website
 ```
 
 ## Deploy
