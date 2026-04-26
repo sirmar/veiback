@@ -1,0 +1,27 @@
+name: Webpage CI
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'webpage/**'
+      - 'resume.yaml'
+      - '.github/workflows/webpage.yml'
+  pull_request:
+    branches: ['**']
+    paths:
+      - 'webpage/**'
+      - 'resume.yaml'
+      - '.github/workflows/webpage.yml'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  ci:
+    uses: ./.github/workflows/package-ci.yml
+    with:
+      package: webpage
+      check_targets: '{"target":["lint","types","security"]}'
+    secrets: inherit
