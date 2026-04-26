@@ -9,18 +9,14 @@ function loadYaml<T>(filename: string): T {
   return yaml.load(raw) as T;
 }
 
-function loadYamlFromRoot<T>(filename: string): T {
-  const filePath = join(process.cwd(), '..', filename);
-  const raw = readFileSync(filePath, 'utf-8');
-  return yaml.load(raw) as T;
-}
-
 export function loadContent(locale: Locale): Content {
   return loadYaml<Content>(`content.${locale}.yaml`);
 }
 
 export function loadResume(): Resume {
-  return loadYamlFromRoot<Resume>('resume.yaml');
+  const filePath = join(process.cwd(), 'resume.yaml');
+  const raw = readFileSync(filePath, 'utf-8');
+  return yaml.load(raw) as Resume;
 }
 
 export function getString(val: BilingualString | string, locale: Locale): string {

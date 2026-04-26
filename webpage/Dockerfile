@@ -2,7 +2,7 @@ FROM ghcr.io/sirmar/dev-typescript:v0.0.3 AS base
 
 FROM base AS deps
 WORKDIR /workspace
-COPY package.json pnpm-lock.yaml astro.config.mjs tsconfig.json biome.json ./
+COPY webpage/package.json webpage/pnpm-lock.yaml webpage/astro.config.mjs webpage/tsconfig.json webpage/biome.json ./
 RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
@@ -19,12 +19,14 @@ FROM deps AS security
 ENTRYPOINT ["/usr/local/bin/security-entrypoint.sh"]
 
 FROM deps AS watch
-COPY public ./public
+COPY webpage/public ./public
+COPY resume.yaml .
 EXPOSE 4321
 ENTRYPOINT ["/usr/local/bin/watch-entrypoint.sh"]
 
 FROM deps AS builder
-COPY . .
+COPY webpage/. .
+COPY resume.yaml .
 RUN pnpm build
 
 FROM nginx:alpine AS prod

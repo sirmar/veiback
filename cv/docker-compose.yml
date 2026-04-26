@@ -3,5 +3,4 @@ services:
     image: cv
     volumes:
       - .:/workspace
-      - ../webpage/src/data/resume.yaml:/workspace/resume.yaml:ro
     working_dir: /workspace

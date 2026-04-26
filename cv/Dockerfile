@@ -3,7 +3,7 @@ WORKDIR /workspace
 
 FROM base AS deps
 ENV PYTHONPATH=/workspace/src
-COPY pyproject.toml uv.lock ./
+COPY cv/pyproject.toml cv/uv.lock ./
 RUN uv sync --extra dev
 
 FROM deps AS lint
@@ -22,7 +22,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 ENV PYTHONPATH=/workspace/src
-COPY pyproject.toml uv.lock ./
+COPY cv/pyproject.toml cv/uv.lock ./
 RUN uv sync --no-dev
-COPY src/ src/
+COPY cv/src/ src/
+COPY resume.yaml .
 ENTRYPOINT ["python", "src/main.py"]
